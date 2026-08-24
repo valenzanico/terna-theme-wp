@@ -7,7 +7,7 @@
     @php(wp_head())
   </head>
   <body @php(body_class())>
-    @include('partials.header')
+    @include('sections.header')
 
     <main>
       @yield('content')
