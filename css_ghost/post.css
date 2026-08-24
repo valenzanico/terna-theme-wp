@@ -1,0 +1,153 @@
+/* ========================================
+   Post Template Styles
+   ======================================== */
+
+.post-container {
+    max-width: 780px;
+    margin: 2.5rem auto 4rem;
+    padding: 3rem;
+    color: #f2f2f2;
+    background: var(--sfondo-scuro);
+    border-radius: 16px;
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.post-feature-image {
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.post-feature-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.post-header {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.post-title {
+    font-family: var(--font-black);
+    font-size: 2.75rem;
+    font-weight: 900;
+    color: var(--lilla);
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-family: var(--font-regular);
+    color: #cccccc;
+    margin-bottom: 1rem;
+}
+
+.post-authors a {
+    color: var(--rosso-terna);
+    text-decoration: none;
+}
+
+.post-authors a:hover {
+    text-decoration: underline;
+}
+
+.post-tags {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: var(--rosso-terna);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.tag:hover {
+    background-color: #a01520;
+}
+
+.post-actions {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--rosso-terna);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: var(--font-medium);
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #a01520;
+}
+
+.post-comments {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #575757;
+}
+
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-prev,
+.nav-next {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: var(--sfondo-testo);
+    transition: background-color 0.3s ease;
+    max-width: 45%;
+}
+
+.nav-prev:hover,
+.nav-next:hover {
+    background-color: #404040;
+}
+
+.nav-label {
+    font-family: var(--font-regular);
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin-bottom: 0.5rem;
+}
+
+.nav-title {
+    font-family: var(--font-medium);
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.nav-next {
+    text-align: right;
+}

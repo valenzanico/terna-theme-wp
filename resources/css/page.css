@@ -1,0 +1,36 @@
+.page-container {
+  max-width: 1200px;
+  margin: 2.5rem auto 4rem;
+  padding: 3rem;
+  color: #f2f2f2;
+  background: var(--sfondo-scuro);
+  border-radius: 16px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.page-feature-image {
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.page-feature-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  font-family: var(--font-black);
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: var(--lilla);
+  margin: 0 0 1rem;
+  line-height: 1.2;
+}

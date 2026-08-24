@@ -1,0 +1,263 @@
+/* ========================================
+   Ghost Content Styles (shared)
+   Used by post.hbs and page.hbs via .gh-content class
+   ======================================== */
+
+/* Background for all non-home templates */
+body.post-template,
+body.page-template,
+body.tag-template,
+body.author-template {
+    background: var(--sfondo-testo);
+    color: #f2f2f2;
+    position: relative;
+    min-height: 100vh;
+}
+
+body.post-template::before,
+body.page-template::before,
+body.tag-template::before,
+body.author-template::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(140% 90% at 50% 0%, rgba(191, 25, 37, 0.72) 0%, rgba(191, 25, 37, 0.42) 45%, rgba(40, 40, 40, 0.0) 80%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Ghost Content Typography & Media
+   --------------------------------
+   Applied to {{content}} output in post and page templates.
+   Uses .gh-content as shared class; template-specific overrides
+   can target .post-content or .page-content if needed. */
+
+.gh-content {
+    font-family: var(--font-regular);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e6e6e6;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+/* Media containment */
+.gh-content img,
+.gh-content iframe,
+.gh-content video,
+.gh-content figure,
+.gh-content embed,
+.gh-content object {
+    max-width: 100%;
+    height: auto;
+}
+
+.gh-content iframe,
+.gh-content video,
+.gh-content embed,
+.gh-content object {
+    display: block;
+    margin: 1rem auto;
+}
+
+.gh-content figure {
+    margin: 1rem auto;
+    max-width: 100%;
+}
+
+.gh-content figure img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Headings */
+.gh-content h1,
+.gh-content h2,
+.gh-content h3,
+.gh-content h4,
+.gh-content h5,
+.gh-content h6 {
+    font-family: var(--font-medium);
+    color: var(--lilla);
+    margin: 2rem 0 1rem 0;
+}
+
+.gh-content h1 { font-size: 2.5rem; }
+.gh-content h2 { font-size: 2rem; }
+.gh-content h3 { font-size: 1.5rem; }
+
+/* Text elements */
+.gh-content p {
+    margin: 1rem 0;
+}
+
+.gh-content a {
+    color: var(--rosso-terna);
+    text-decoration: none;
+}
+
+.gh-content a:hover {
+    text-decoration: underline;
+}
+
+.gh-content strong {
+    color: var(--lilla);
+    font-weight: 600;
+}
+
+.gh-content blockquote {
+    border-left: 4px solid var(--rosso-terna);
+    padding-left: 1rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #d0d0d0;
+}
+
+/* Blockquote alternative (Ghost editor aside style) */
+.gh-content blockquote.kg-blockquote-alt {
+    border-left: none;
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 0 2rem;
+    color: #d0d0d0;
+    position: relative;
+}
+
+.gh-content ul,
+.gh-content ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+/* Images */
+.gh-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 1rem auto;
+    display: block;
+}
+
+/* Code */
+.gh-content code {
+    background-color: var(--sfondo-testo);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+.gh-content pre {
+    background-color: var(--sfondo-testo);
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.gh-content pre code {
+    background: none;
+    padding: 0;
+}
+
+/* ========================================
+   Ghost Editor Cards (Koenig)
+   ======================================== */
+
+.kg-card {
+    margin: 2rem 0;
+}
+
+.kg-card figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* Wide & Full-width breakout
+   These break out of the .post-container / .page-container
+   using the left: 50% + negative transform technique. */
+
+.kg-width-wide {
+    position: relative;
+    width: 85vw;
+    max-width: 1100px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2rem 0;
+}
+
+.kg-width-full {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2rem 0;
+}
+
+.kg-image-card {
+    margin: 2rem auto;
+    max-width: 100%;
+}
+
+.kg-image-card img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+.kg-gallery-card {
+    margin: 2rem 0;
+}
+
+.kg-gallery-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.kg-gallery-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.kg-gallery-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.kg-gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kg-embed-card {
+    margin: 2rem 0;
+}
+
+.kg-embed-card iframe {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive adjustments for wide content */
+@media (max-width: 768px) {
+    .kg-width-wide,
+    .kg-width-full {
+        width: 100%;
+        left: auto;
+        transform: none;
+        margin: 2rem auto;
+    }
+
+    .kg-gallery-row {
+        flex-direction: column;
+    }
+}
