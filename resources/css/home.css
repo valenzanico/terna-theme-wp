@@ -5,8 +5,8 @@
   width: 100%;
 }
 
-.homepage-content .dropdown-menu {
-  width: 100%;
+.dropdown-menu {
+  width: var(--home-split);
 }
 
 .homepage {
@@ -317,4 +317,9 @@
     margin-right: 0;
     z-index: 1002; /* higher than .news-header */
   }
+ 
+  .news-content {
+    margin-top: var(--header-height);
+  }
+
 }
