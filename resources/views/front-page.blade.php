@@ -1,3 +1,5 @@
+<!-- Questa è il template per la home page del tuo sito WordPress. Estende il layout principale e definisce il contenuto della sezione principale della pagina. -->
+
 @extends('layouts.app')
 
 @section('content')
@@ -27,6 +29,19 @@
         </div>
       @endif
     </div>
+     <img
+          class="vector-left-container"
+          src="{{ Vite::asset('resources/images/vector-left.svg') }}"
+          alt=""
+          aria-hidden="true"
+        >
+        <img
+          class="vector-right-container"
+          src="{{ Vite::asset('resources/images/vector-right.svg') }}"
+          alt=""
+          aria-hidden="true"
+        >
+      </div>
 
     <section class="news-section">
       <div class="news-header">

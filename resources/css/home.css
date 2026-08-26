@@ -5,7 +5,7 @@
   width: 100%;
 }
 
-.dropdown-menu {
+.home .dropdown-menu {
   width: var(--home-split);
 }
 
@@ -311,7 +311,7 @@
     background: linear-gradient(180deg, #4a1b1f 0%, #3b1417 100%);
   }
   /* Ensure homepage menu appears above the news-header */
-  .menu {
+  .home .menu {
     position: absolute;
     left: calc(var(--home-split) - 120px);
     margin-right: 0;
