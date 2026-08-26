@@ -1,0 +1,17 @@
+/* news-header.css
+   Keep the news header positioned below the global header on wide screens
+   This file should be imported after the main CSS so it can override rules.
+*/
+
+@media (min-width: 992px) {
+  .news-header {
+    position: fixed; /* keep fixed so content scrolls under it */
+    top: var(--header-height); /* sit immediately under the global header */
+    z-index: 1001; /* below the global header */
+  }
+
+  /* ensure news-content accounts for fixed header offset */
+  .news-content {
+    margin-top: calc(var(--header-height) + 0px);
+  }
+}

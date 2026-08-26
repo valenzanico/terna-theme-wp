@@ -20,3 +20,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 import '../css/app.css';
+import '../css/news-header.css';
