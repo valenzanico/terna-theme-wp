@@ -6,9 +6,26 @@
       <div class="title">
         {{ get_bloginfo('name') }}
       </div>
-      <div class="home-p">
-        <p class="home-p2">{{ get_bloginfo('description') }}</p>
-      </div>
+      @php
+        $front_id = get_option('page_on_front');
+        $front_content = '';
+        if ($front_id) {
+          $front_post = get_post($front_id);
+          if ($front_post) {
+            $front_content = apply_filters('the_content', $front_post->post_content);
+          }
+        }
+      @endphp
+
+      @if(!empty($front_content))
+        <div class="home-content-extra gh-content">
+          {!! $front_content !!}
+        </div>
+      @else
+        <div class="home-p">
+          <p class="home-p2">{{ get_bloginfo('description') }}</p>
+        </div>
+      @endif
     </div>
 
     <section class="news-section">
@@ -17,10 +34,19 @@
       </div>
       <div class="news-content">
         <div class="news-list">
-          @while(have_posts())
-            @php(the_post())
+          @php
+            $latest_posts = new WP_Query([
+              'post_type' => 'post',
+              'posts_per_page' => 5,
+            ]);
+          @endphp
+
+          @while($latest_posts->have_posts())
+            @php($latest_posts->the_post())
             @include('components.post-card')
           @endwhile
+
+          @php(wp_reset_postdata())
         </div>
       </div>
     </section>
