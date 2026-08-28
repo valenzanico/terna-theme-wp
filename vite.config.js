@@ -21,7 +21,7 @@ export default defineConfig({
       host: 'localhost',
     },
   },
-  base: `/app/themes/${themeSlug}/public/build/`,
+  base: `/wp-content/themes/${themeSlug}/public/build/`,
   plugins: [
     tailwindcss(),
       laravel({
