@@ -16,7 +16,7 @@
         </header>
 
         <div class="page-content gh-content">
-          {!! get_the_content() !!}
+          @php(the_content())
         </div>
       </article>
     </div>
