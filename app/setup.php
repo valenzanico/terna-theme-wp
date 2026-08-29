@@ -132,7 +132,7 @@ add_action('after_setup_theme', function () {
     /**
      * Enable support for block styles.
      */
-    add_theme_support('wp-block-styles');
+    //add_theme_support('wp-block-styles');
 
     /**
      * Enable selective refresh for widgets in customizer.
